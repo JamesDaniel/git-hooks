@@ -11,3 +11,6 @@ if ! [[ $MSG =~ ^DP-[0-9]{1,}.* ]]; then
     echo "    "Commit message must reference a Jira number. E.g. DP-1234
     exit 1
 fi
+
+
+# https://github.com/typicode/husky/tree/master
