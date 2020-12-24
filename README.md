@@ -1,16 +1,16 @@
-#!/bin/sh
-#.git/hooks/commit-msg
-MSG=`cat $1`
+# Commit message hook automation for local git repositories
 
-if [[ "$MSG" =~ ^Merged.* ]]; then
-    exit 0
-fi
+## Links
+- https://github.com/typicode/husky/tree/master
 
-if ! [[ $MSG =~ ^DP-[0-9]{1,}.* ]]; then
-    echo "Error: "
-    echo "    "Commit message must reference a Jira number. E.g. DP-1234
-    exit 1
-fi
+## Requirements
+- nodejs >= 10
+- `/bin/bash` exists
+- husky config exists in `package.json`
+- it is a git repository `npm init`
+- hisky is installed `npm install --save-dev husky`
 
-
-# https://github.com/typicode/husky/tree/master
+## Debugging issues
+- rm -rf .git/hooks
+- npm uninstall husky
+- npm install --save-dev husky
