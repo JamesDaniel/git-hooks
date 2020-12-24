@@ -1,0 +1,27 @@
+{
+  "name": "git-hooks",
+  "version": "1.0.0",
+  "description": "MSG=`cat $1`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "./.githooks/commit-msg $HUSKY_GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesDaniel/git-hooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesDaniel/git-hooks/issues"
+  },
+  "homepage": "https://github.com/JamesDaniel/git-hooks#readme",
+  "devDependencies": {
+    "husky": "^4.3.6"
+  }
+}
